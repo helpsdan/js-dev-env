@@ -5,6 +5,8 @@
   "scripts": {
     "prestart": "babel-node core/src/scripts/startMessage.js",
     "start": "babel-node core/src/scripts/server.js",
+    "lint": "esw webpack.config.* core --color",
+    "lint:watch": "npm run lint -- --watch",
     "security-check": "nsp check",
     "localtunnel": "lt --port 3000",
     "share": "npm-run-all --parallel localtunnel open:server"
